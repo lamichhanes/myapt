@@ -1,13 +1,13 @@
-package com.storage.unit;
+package com.myapt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StorageunitApplication {
+public class MyAptApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StorageunitApplication.class, args);
+		SpringApplication.run(MyAptApp.class, args);
 	}
 
 }

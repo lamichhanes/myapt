@@ -1,8 +1,7 @@
-package com.storage.unit.service.customer;
+package com.myapt.service.customer;
 
-import com.storage.unit.models.customer.CustomerInfo;
-import com.storage.unit.repository.customer.CustomerInfoRepository;
-import org.hibernate.ObjectNotFoundException;
+import com.myapt.models.customer.CustomerInfo;
+import com.myapt.repository.customer.CustomerInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +20,10 @@ public class CustomerInfoServiceImpl implements CustomerInfoService {
             throw new Exception("CustomerInfo cannot be empty");
         }
     }
+
+    @Override
+    public CustomerInfo findCustomerByCustomerId(Long customerId) {
+        return customerInfoRepository.findCustomerInfoByCustomerId(customerId);
+    }
+
 }
